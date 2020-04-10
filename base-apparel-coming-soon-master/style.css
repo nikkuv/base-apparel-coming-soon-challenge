@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --desaturated-red: hsl(0, 36%, 70%);
+    --Soft-red: hsl(0, 93%, 68%);
+
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+html,
+body{
+    
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.image{
+    background-image: url('./images/hero-desktop.jpg');
+    background-size: cover;
+    width: 45%;
+}
+
+.padding{
+    margin: 20px 40px;
+    padding: 20px 40px;
+}
+
+.content{
+    width: 55%;
+}
+
+.light{
+    display: block;
+    font-weight: 300;
+    color: var(--desaturated-red);
+    letter-spacing: 5px;
+}
+
+h1{
+    margin-top: 70px;
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    max-width: 20%;
+}
+
+.content p{
+    margin: 30px 0;
+    line-height: 25px;
+    font-size: 16px;
+    color: var(--desaturated-red);
+    letter-spacing: 1px;
+    text-align: start;
+    width: 80%;
+}
+
+.email-bar small{
+    position: absolute;
+    top: 120%;
+    left: 3%;
+    color: var(--Soft-red);
+    display: none;
+}
+
+.email-bar .error-icon{
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    display: none;
+}
+
+.email-bar input{
+    border: none;
+    padding: 20px;
+    background: none;
+    border: 1px solid var(--desaturated-red);
+    border-radius: 50px;
+    margin: 40px 0;
+    position: relative;
+    width: 80%;
+    height: 8vh;
+}
+
+.email-bar input:focus{
+    outline: none;
+}
+
+.email-bar{
+    position: relative;
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    width: 20%;
+    height: 8vh;
+    border-radius: 50px;
+    padding: 0 20px;
+    box-shadow: 0 7px 6px hsl(0, 74%, 74%),
+    0 3px 6px hsl(0, 74%, 74%);
+    padding: 20px;
+    position: absolute;
+    right: 20%;
+    top: 29%;
+}
+
+.email-bar .btn:focus{
+    outline: none;
+}
+
+.mobile-image{
+    display: none;
+}
+
+@media screen and (max-width: 760px){
+
+
+    .container{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .content{
+        width: 100vw;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .image{
+        display: none;
+    }
+
+    .mobile-image{
+        display: block;
+        background-size: cover;
+    }
+
+    .padding{
+        padding: 0;
+    }
+
+    .logo{
+        padding:20px;
+    }
+
+    .heading{
+        padding: 20px;
+        font-size: 3rem;
+    }
+
+    .para{
+        padding: 20px;
+    }
+
+    .email-bar{
+        padding : 20px;
+    }
+}
