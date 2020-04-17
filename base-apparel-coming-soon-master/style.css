@@ -66,9 +66,9 @@ h1{
     width: 80%;
 }
 
-.email-bar small{
+.email-bar .error-msg{
     position: absolute;
-    top: 120%;
+    top: 80%;
     left: 3%;
     color: var(--Soft-red);
     display: none;
@@ -76,9 +76,17 @@ h1{
 
 .email-bar .error-icon{
     position: absolute;
-    top: 30%;
-    right: 25%;
+    top: 40%;
+    right: 45%;
     display: none;
+}
+
+.error-icon.error{
+    display: block;
+}
+
+.error-msg.error{
+    display: block;
 }
 
 .email-bar input{
