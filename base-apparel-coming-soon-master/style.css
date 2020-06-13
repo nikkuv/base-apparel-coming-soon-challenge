@@ -10,34 +10,34 @@
 
     --dark-grayish-red: hsl(0, 6%, 24%);
 }
-
 html,
 body{
-    
     font-family: 'Josefin Sans', sans-serif;
     background-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     font-size: 16px;
+    background-image: url(../base-apparel-coming-soon-master/images/bg-pattern-desktop.svg);
 }
 
 .container{
     display: flex;
-    height: 100vh;
-    width: 100%;
+    max-height: 100vh;
+    max-width: 1440px;
+}
+
+.container > div{
+    flex: 1;
+}
+
+.wrapper{
+    margin: 2rem 4rem;
+    padding: 2rem;
 }
 
 .image{
     background-image: url('./images/hero-desktop.jpg');
     background-size: cover;
+    height: auto;
     width: 45%;
-}
-
-.padding{
-    margin: 20px 40px;
-    padding: 20px 40px;
-}
-
-.content{
-    width: 55%;
 }
 
 .light{
@@ -45,30 +45,32 @@ body{
     font-weight: 300;
     color: var(--desaturated-red);
     letter-spacing: 5px;
+    font-size: 4rem;
+    margin-top: 4rem;
+
 }
 
 h1{
-    margin-top: 70px;
     font-size: 4rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 15px;
-    max-width: 20%;
+    letter-spacing: 10px;
+    margin-bottom: 2rem;
 }
 
 .content p{
-    margin: 30px 0;
-    line-height: 25px;
+    
+    line-height: 20px;
     font-size: 16px;
     color: var(--desaturated-red);
     letter-spacing: 1px;
     text-align: start;
-    width: 80%;
+    margin: 2rem 0;
 }
 
 .email-bar .error-msg{
     position: absolute;
-    top: 80%;
+    bottom: -50%;
     left: 3%;
     color: var(--Soft-red);
     display: none;
@@ -76,8 +78,8 @@ h1{
 
 .email-bar .error-icon{
     position: absolute;
-    top: 40%;
-    right: 45%;
+    top: 25%;
+    right: 25%;
     display: none;
 }
 
@@ -89,15 +91,15 @@ h1{
     display: block;
 }
 
+
 .email-bar input{
     border: none;
     padding: 20px;
     background: none;
     border: 1px solid var(--desaturated-red);
     border-radius: 50px;
-    margin: 40px 0;
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 8vh;
 }
 
@@ -106,7 +108,8 @@ h1{
 }
 
 .email-bar{
-    position: relative;
+    position: relative; 
+    margin-bottom: 2rem;
 }
 
 .btn{
@@ -116,13 +119,10 @@ h1{
     width: 20%;
     height: 8vh;
     border-radius: 50px;
-    padding: 0 20px;
-    box-shadow: 0 7px 6px hsl(0, 74%, 74%),
-    0 3px 6px hsl(0, 74%, 74%);
-    padding: 20px;
+    box-shadow: 0px 4px 10px hsla(0, 74%, 74%, .7);
     position: absolute;
-    right: 20%;
-    top: 29%;
+    top: 0;
+    right: 0;
 }
 
 .email-bar .btn:focus{
@@ -133,47 +133,35 @@ h1{
     display: none;
 }
 
-@media screen and (max-width: 760px){
-
-
-    .container{
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-    .content{
-        width: 100vw;
-        margin: 0;
-        padding: 20px;
+@media screen and (max-width: 375px){
+    .mobile-image{
+        display: block;
+        width: 100%;
     }
 
     .image{
         display: none;
     }
 
-    .mobile-image{
-        display: block;
-        background-size: cover;
-    }
-
-    .padding{
+    .wrapper{
+        width: 100%;
+        margin: 0 auto;
         padding: 0;
     }
 
+    .light, h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .content p{
+        text-align: center;
+    }
+
     .logo{
-        padding:20px;
+        padding: 1rem;
     }
 
-    .heading{
-        padding: 20px;
-        font-size: 3rem;
-    }
+    
 
-    .para{
-        padding: 20px;
-    }
-
-    .email-bar{
-        padding : 20px;
-    }
 }
