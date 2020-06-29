@@ -49,12 +49,12 @@ body{
     font-weight: 300;
     color: var(--desaturated-red);
     letter-spacing: 5px;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h1{
     margin: 4rem 0 2rem 0;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -67,7 +67,7 @@ h1{
     letter-spacing: 1px;
     text-align: start;
     margin: 2rem 0;
-    width: 70%;
+    width: 75%;
 }
 
 
@@ -115,7 +115,7 @@ h1{
 
 .email-bar{
     position: relative; 
-    width: 70%;
+    width: 75%;
 }
 
 .email-bar .btn{
