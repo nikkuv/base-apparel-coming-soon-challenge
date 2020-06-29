@@ -1,5 +1,5 @@
 const form = document.querySelector('.email-bar');
-const input = document.querySelector('#email');
+const input = document.querySelector('.email');
 const errorIcon = document.querySelector('.error-icon');
 const errorMsg = document.querySelector('.error-msg');
 
@@ -8,14 +8,17 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault();
 
     const getEmail = input.value;
+  
 
     if(!validateEmail(getEmail)){
         errorIcon.classList.add('error');
         errorMsg.classList.add('error');
+        input.classList.add('error');
     }
     else{
         errorIcon.classList.remove('error');
         errorMsg.classList.remove('error');
+        input.classList.remove('error');
     }
 })
 
